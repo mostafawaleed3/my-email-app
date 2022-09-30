@@ -18,7 +18,7 @@ export const validate = ({ name, age, details, phone, email }: FormType) => {
     errors.age = 'Invalid Age';
   }
 
-  if (!phone || age.trim() === '') {
+  if (!phone || phone.trim() === '') {
     errors.phone = 'Phone number is required';
   } else if (
     !/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g.test(phone)
